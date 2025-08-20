@@ -6,7 +6,6 @@ import scipy.io
 import os
 from torch.utils.data import Dataset
 import matplotlib.pyplot as plt
-import torch.nn.functional as F 
 import torch.optim as optim
 from torch.optim import lr_scheduler
 from tqdm import tqdm
@@ -142,11 +141,11 @@ for i in range(6):
     plt.title(f" {label_name[i] }")
     plt.axis('off')
 plt.show()
-print(f"Number of test samples: {len(test_dataset)}")
-print(f"Number of training samples: {len(train_dataset)}")
-print(f"Number of validation samples: {len(val_dataset)}")
-print(f"number of training dataloaded per batch: {len(training_flower_data)}")
-print(f"number of test dataloaded per batch: {len(test_flower_data)}")
+# print(f"Number of test samples: {len(test_dataset)}")
+# print(f"Number of training samples: {len(train_dataset)}")
+# print(f"Number of validation samples: {len(val_dataset)}")
+# print(f"number of training dataloaded per batch: {len(training_flower_data)}")
+# print(f"number of test dataloaded per batch: {len(test_flower_data)}")
 
 
 model = models.resnet18(weights=models.ResNet18_Weights.IMAGENET1K_V1)  
